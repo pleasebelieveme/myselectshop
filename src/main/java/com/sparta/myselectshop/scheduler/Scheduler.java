@@ -24,7 +24,7 @@ public class Scheduler {
 
     // 초, 분, 시, 일, 월, 주 순서
     // https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/support/CronExpression.html
-    @Scheduled(cron = "*/10 * * * * *") // 테스트 10초마다
+//    @Scheduled(cron = "*/10 * * * * *") // 테스트 10초마다
     @Scheduled(cron = "0 0 1 * * *") // 매일 새벽 1시
     public void updatePrice() throws InterruptedException {
         log.info("가격 업데이트 실행");
