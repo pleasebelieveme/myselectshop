@@ -18,7 +18,7 @@ $(document).ready(function () {
         url: `/api/user-info`,
         contentType: 'application/json',
     })
-        .done(function (res, status, xhr) {
+        .done(function (res, status, xhr) { // admin 분기처리
             const username = res.username;
             const isAdmin = !!res.admin;
 
@@ -157,6 +157,7 @@ function addProduct(itemDto) {
     });
 }
 
+// admin 분기처리 url
 function showProduct(isAdmin = false) {
     /**
      * 관심상품 목록: #product-container
