@@ -48,6 +48,7 @@ public class ProductService {
         return new ProductResponseDto(findRroduct);
     }
 
+    @Transactional(readOnly = true)
     public Page<ProductResponseDto> getProducts(User user, int page, int size, String sortBy, boolean isAse) {
         Sort.Direction direction = isAse ? Sort.Direction.ASC : Sort.Direction.DESC;
         Sort sort = Sort.by(direction, sortBy);
