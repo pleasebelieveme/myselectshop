@@ -22,6 +22,7 @@ public class NaverApiService {
 
     private final RestTemplate restTemplate;
 
+    // 자동으로 RestTemplate 관리 가능 config.RestTemplate로 수동등록 가능
     public NaverApiService(RestTemplateBuilder builder) {
         this.restTemplate = builder.build();
     }
