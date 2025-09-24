@@ -25,6 +25,9 @@ repositories {
 }
 
 dependencies {
+    // 환경변수 .env
+    implementation("me.paulschwarz:spring-dotenv:4.0.0")
+
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
     // JWT
@@ -46,6 +49,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
+    runtimeOnly 'org.postgresql:postgresql'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
